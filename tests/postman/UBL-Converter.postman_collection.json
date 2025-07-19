@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "e8f5b3a2-1234-5678-9abc-def012345678",
+		"name": "UBL-Converter",
+		"description": "Colección para probar el servicio de conversión y envío de facturas UBL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Consultar CDR",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tipo_comprobante\": \"01\",\n    \"serie\": \"F001\",\n    \"numero\": \"123\"\n}"
+				}
+				},
+				"url": {
+					"raw": "http://localhost:8080/prepare",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8080",
+					"path": ["prepare"]
+				},
+				"description": "Prepara y valida una factura para su envío a SUNAT"
+			},
+			"response": []
+		},
+		{
+			"name": "Enviar Factura a SUNAT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"invoice_id\": \"F001-123\",\n    \"zip_file\": \"20123456789-01-F001-123.zip\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/send",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8080",
+					"path": ["send"]
+				},
+				"description": "Envía una factura previamente preparada a SUNAT"
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar Estado CDR",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tipo_comprobante\": \"01\",\n    \"serie\": \"F001\",\n    \"numero\": \"123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/consulta-cdr",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8080",
+					"path": ["consulta-cdr"]
+				},
+				"description": "Consulta el estado del CDR de una factura"
+			},
+			"response": []
+		}
+	]
+}

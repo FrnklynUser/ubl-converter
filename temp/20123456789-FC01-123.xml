@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreditNote xmlns="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2">
+  <ext:UBLExtensions>
+    <ext:UBLExtension>
+      <ext:ExtensionContent><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><ds:Reference URI=""><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>TwvNr3Rlr/pQU/xt7W5YK6xe8JU=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>xgzDz5ZqGESqtgZuJ3vTQiCuizMn4KiiUjd9DRnexak0r5GQOU6s+o8t0tDh47cAzzvsXOHA6VeNCXEei/NfS8qeuWQblOzISY5kbDe/VCVDUpeLLMt+pnVu0NiaxtGjtpFjdy/Ftdx9bbsQBQhzh4RC7+ker4JW0DZtgrjRdn3ccCTN6KIMDHYipC3+3CQnA/XzyA4DWtZYvGfLr6gJpK/OTPezxnDxlUBQ8quKRJExxskAk9uqAn8F2HbnbiVMYnM9CKsvRw/PLpxk1zRFTzREA+x9r+BOH0eCW3shQ1/F1E83t3FF1O4y2nxeXu1ctS0f1i+pxHjaPsutusrAVQ==</ds:SignatureValue><ds:KeyInfo><ds:X509Data><ds:X509Certificate>MIIDjjCCAnagAwIBAgITB8Xc4v/5Bwf3KR4dPFAywRzDJzANBgkqhkiG9w0BAQsFADBXMQswCQYDVQQGEwJQRTENMAsGA1UECAwETElNQTENMAsGA1UEBwwETElNQTEUMBIGA1UECgwLRU1QUkVTQSBTQUMxFDASBgNVBAMMCzIwMTIzNDU2Nzg5MB4XDTI1MDcxOTAzMjEzOFoXDTM1MDcxNzAzMjEzOFowVzELMAkGA1UEBhMCUEUxDTALBgNVBAgMBExJTUExDTALBgNVBAcMBExJTUExFDASBgNVBAoMC0VNUFJFU0EgU0FDMRQwEgYDVQQDDAsyMDEyMzQ1Njc4OTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMidErMrHpmCLb/xt0yJtBub3esKqGaVqV+h46N+1BT2Eo/sVI4sQgAIdDdhEpuC33dYJGKHgLYibp9XFu8OV5RzmZZNRGfH8Pml41yZD0GFidDHxT1gcxBPFXJBVyZk5WDxDwFOOwJ05w5pKyYYcGzWGppNE/d3V+2bQU+3cwy6malfIGEmsl4cd7ob5UaJRq4ubUQ/ibByrcdHtSoTDojYfqy0WMp6ZTqlV5sumD1emivQmcBl7YOmKNv3Qi15jsk+YDs9jFCJ1s6eO5np7JtBwk25Dqg5KLHcTxqvwuG0y1bRCVwbZY5+IJOuMXPdAJP+9vLmntB4TUOD10v2L7ECAwEAAaNTMFEwHQYDVR0OBBYEFLN2pPup2P4VOmLfgbltdbV52qgRMB8GA1UdIwQYMBaAFLN2pPup2P4VOmLfgbltdbV52qgRMA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBABsp+0K2+Fs7E6BS3VZ/1LHbA0ewrJqjgElGZBv3/AOCFiZ3zWX9PtHFEPeHoy/ZVH3tsu34dRE3EWVtj4UnNU09CudqJQixUOW4q/LyINLRyAKSkzmwNOEMwnZMEsW18RS7k3yc11m3YH0GTs/UM23xSuV2hKVlKt3pE/LfWuT+tW2L1/5dIuu9QKq2gitRl/Yfj6dfcQyDtepEFczPsjm+hYwdIhLaA0SJb4gcZpTNivWTzFOC2Lx8DHI+QG7+5tNpvP9wgb8bEZOuQVDYZ12yaFfwsh5ZsGQVNZ7g/IicPZQ6ni+3Zj1iuI1qGzKIhAKofpxcV4rmT/Iu+oSqAaw=</ds:X509Certificate></ds:X509Data></ds:KeyInfo></ds:Signature></ext:ExtensionContent>
+    </ext:UBLExtension>
+  </ext:UBLExtensions>
+  <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+  <cbc:CustomizationID>2.0</cbc:CustomizationID>
+  <cbc:ID>FC01-123</cbc:ID>
+  <cbc:IssueDate></cbc:IssueDate>
+  <cbc:IssueTime></cbc:IssueTime>
+  <cbc:DocumentCurrencyCode>PEN</cbc:DocumentCurrencyCode>
+  <cac:DiscrepancyResponse>
+    <cbc:ReferenceID></cbc:ReferenceID>
+    <cbc:ResponseCode>01</cbc:ResponseCode>
+    <cbc:Description></cbc:Description>
+  </cac:DiscrepancyResponse>
+  <cac:BillingReference>
+    <cac:InvoiceDocumentReference>
+      <cbc:ID></cbc:ID>
+      <cbc:DocumentTypeCode></cbc:DocumentTypeCode>
+    </cac:InvoiceDocumentReference>
+  </cac:BillingReference>
+  <cac:AccountingSupplierParty>
+    <cbc:CustomerAssignedAccountID>20123456789</cbc:CustomerAssignedAccountID>
+    <cac:Party>
+      <cac:PartyName>
+        <cbc:Name>EMPRESA SAC</cbc:Name>
+      </cac:PartyName>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName>EMPRESA SAC</cbc:RegistrationName>
+        <cbc:CompanyID>20123456789</cbc:CompanyID>
+      </cac:PartyLegalEntity>
+    </cac:Party>
+  </cac:AccountingSupplierParty>
+  <cac:AccountingCustomerParty>
+    <cbc:CustomerAssignedAccountID>10456789012</cbc:CustomerAssignedAccountID>
+    <cac:Party>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName>CLIENTE SAC</cbc:RegistrationName>
+        <cbc:CompanyID>10456789012</cbc:CompanyID>
+      </cac:PartyLegalEntity>
+    </cac:Party>
+  </cac:AccountingCustomerParty>
+  <cac:TaxTotal>
+    <cbc:TaxAmount currencyID="PEN">9</cbc:TaxAmount>
+  </cac:TaxTotal>
+  <cac:LegalMonetaryTotal>
+    <cbc:LineExtensionAmount currencyID="">0</cbc:LineExtensionAmount>
+    <cbc:TaxInclusiveAmount currencyID="">0</cbc:TaxInclusiveAmount>
+    <cbc:PayableAmount currencyID="PEN">59</cbc:PayableAmount>
+  </cac:LegalMonetaryTotal>
+  <cac:CreditNoteLine>
+    <cbc:ID>1</cbc:ID>
+    <cbc:CreditedQuantity unitCode="">1</cbc:CreditedQuantity>
+    <cbc:LineExtensionAmount currencyID="PEN">0</cbc:LineExtensionAmount>
+    <cac:TaxTotal>
+      <cbc:TaxAmount currencyID="PEN">-9</cbc:TaxAmount>
+    </cac:TaxTotal>
+    <cac:Item>
+      <cbc:Description>Descuento aplicado</cbc:Description>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="PEN">-50</cbc:PriceAmount>
+    </cac:Price>
+  </cac:CreditNoteLine>
+</CreditNote>

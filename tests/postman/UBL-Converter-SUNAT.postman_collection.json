@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "e8f5b3a2-1234-5678-9abc-def012345678",
+		"name": "UBL-Converter-SUNAT",
+		"description": "Colección para probar el servicio de consultas SUNAT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Consultar CDR",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tipo_comprobante\": \"01\",\n    \"serie\": \"F001\",\n    \"numero\": \"123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/sunat/consulta-cdr",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8080",
+					"path": [
+						"sunat",
+						"consulta-cdr"
+					]
+				},
+				"description": "Consulta el CDR (Constancia de Recepción) de un documento"
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar Estado",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tipo_comprobante\": \"01\",\n    \"serie\": \"F001\",\n    \"numero\": \"123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/sunat/consulta-estado",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8080",
+					"path": [
+						"sunat",
+						"consulta-estado"
+					]
+				},
+				"description": "Consulta el estado de un documento en SUNAT"
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar Ticket",
+			"request": {
+				"method": "GET",
+				"url": {
+					"raw": "http://localhost:8080/sunat/consulta-ticket?ticket=1234567890",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8080",
+					"path": [
+						"sunat",
+						"consulta-ticket"
+					],
+					"query": [
+						{
+							"key": "ticket",
+							"value": "1234567890"
+						}
+					]
+				},
+				"description": "Consulta el estado de un ticket de procesamiento"
+			},
+			"response": []
+		}
+	]
+}

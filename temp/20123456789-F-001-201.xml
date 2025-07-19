@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" version="2.1">
+  <ID>F001-123</ID>
+  <IssueDate>2025-07-18</IssueDate>
+  <IssueTime>12:00:00</IssueTime>
+  <InvoiceTypeCode>01</InvoiceTypeCode>
+  <DocumentCurrencyCode>PEN</DocumentCurrencyCode>
+  <AccountingSupplierParty>
+    <Party>
+      <PartyName>
+        <Name>MI EMPRESA SAC</Name>
+      </PartyName>
+      <PartyIdentification>
+        <ID schemeID="6">20123456789</ID>
+      </PartyIdentification>
+      <PostalAddress>
+        <StreetName>AV. LIMA 123</StreetName>
+        <CityName>LIMA</CityName>
+        <CountrySubentity>LIMA</CountrySubentity>
+        <District>LIMA</District>
+      </PostalAddress>
+    </Party>
+  </AccountingSupplierParty>
+  <AccountingCustomerParty>
+    <Party>
+      <PartyName>
+        <Name>EMPRESA CLIENTE SAC</Name>
+      </PartyName>
+      <PartyIdentification>
+        <ID schemeID="6">20987654321</ID>
+      </PartyIdentification>
+      <PostalAddress>
+        <StreetName></StreetName>
+        <CityName></CityName>
+        <CountrySubentity></CountrySubentity>
+        <District></District>
+      </PostalAddress>
+    </Party>
+  </AccountingCustomerParty>
+  <TaxTotal>
+    <TaxAmount currencyID="PEN">18.00</TaxAmount>
+    <TaxSubtotal>
+      <TaxAmount currencyID="PEN">18.00</TaxAmount>
+      <TaxCategory>
+        <ID>S</ID>
+        <Percent>18</Percent>
+        <TaxScheme>
+          <ID>1000</ID>
+          <Name>IGV</Name>
+        </TaxScheme>
+      </TaxCategory>
+    </TaxSubtotal>
+  </TaxTotal>
+  <LegalMonetaryTotal currencyID="PEN">118.00</LegalMonetaryTotal>
+  <InvoiceLine>
+    <ID>1</ID>
+    <InvoicedQuantity unitCode="NIU">1</InvoicedQuantity>
+    <LineExtensionAmount currencyID="PEN">118.00</LineExtensionAmount>
+    <Item>
+      <Description>PRODUCTO DE PRUEBA</Description>
+    </Item>
+    <Price>
+      <PriceAmount currencyID="PEN">118.00</PriceAmount>
+    </Price>
+  </InvoiceLine>
+</Invoice>

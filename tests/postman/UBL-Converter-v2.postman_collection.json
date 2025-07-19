@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "e8f5b3a2-1234-5678-9abc-def012345678",
+		"name": "UBL-Converter",
+		"description": "Colección para probar el servicio de conversión y envío de facturas UBL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Convertir a UBL",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"emisor\": {\n        \"ruc\": \"20123456789\",\n        \"razon_social\": \"MI EMPRESA SAC\",\n        \"direccion\": \"AV. LIMA 123\",\n        \"distrito\": \"LIMA\",\n        \"provincia\": \"LIMA\",\n        \"departamento\": \"LIMA\",\n        \"ubigeo\": \"150101\"\n    },\n    \"receptor\": {\n        \"ruc\": \"20987654321\",\n        \"razon_social\": \"EMPRESA CLIENTE SAC\"\n    },\n    \"comprobante\": {\n        \"serie\": \"F001\",\n        \"numero\": \"123\",\n        \"fecha_emision\": \"2025-07-18\",\n        \"hora_emision\": \"12:00:00\",\n        \"tipo_comprobante\": \"01\",\n        \"moneda\": \"PEN\",\n        \"total_gravado\": \"100.00\",\n        \"total_igv\": \"18.00\",\n        \"total\": \"118.00\"\n    },\n    \"detalle\": [\n        {\n            \"item\": 1,\n            \"descripcion\": \"PRODUCTO DE PRUEBA\",\n            \"cantidad\": \"1\",\n            \"valor_unitario\": \"100.00\",\n            \"precio_unitario\": \"118.00\",\n            \"tipo_precio\": \"01\",\n            \"igv\": \"18.00\",\n            \"tipo_afectacion_igv\": \"10\",\n            \"total_base\": \"100.00\",\n            \"porcentaje_igv\": \"18\",\n            \"unidad_medida\": \"NIU\",\n            \"total\": \"118.00\"\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/convert",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8080",
+					"path": ["convert"]
+				},
+				"description": "Convierte los datos de la factura a formato UBL"
+			},
+			"response": []
+		},
+		{
+			"name": "Enviar Factura",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"invoice_id\": \"F001-123\",\n    \"xml\": \"<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\"?>\\n<Invoice>...</Invoice>\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/send",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8080",
+					"path": ["send"]
+				},
+				"description": "Envía una factura en formato UBL a SUNAT"
+			},
+			"response": []
+		},
+		{
+			"name": "Cargar Factura",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/path/to/your/invoice.xml"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/load",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8080",
+					"path": ["load"]
+				},
+				"description": "Carga un archivo XML de factura existente"
+			},
+			"response": []
+		},
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"url": {
+					"raw": "http://localhost:8080/ping",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8080",
+					"path": ["ping"]
+				},
+				"description": "Verifica que el servicio esté funcionando"
+			},
+			"response": []
+		}
+	]
+}
